@@ -1,0 +1,15 @@
+<div>
+  <h1>Mi calculadora</h1>
+  <label for="num1">Número 1:</label>
+  {{input type="number" value=this.num1 id="num1"}}
+
+  <label for="num2">Número 2:</label>
+  {{input type="number" value=this.num2 id="num2"}}
+  <br>
+  <button {{on "click" (fn this.handleOperation 'add')}}>+</button>
+  <button {{on "click" (fn this.handleOperation 'subtract')}}>-</button>
+  <button {{on "click" (fn this.handleOperation 'multiply')}}>*</button>
+  <button {{on "click" (fn this.handleOperation 'divide')}}>/</button>
+
+  <p>Resultado: {{this.result}}</p>
+</div>
